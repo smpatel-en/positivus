@@ -1,0 +1,49 @@
+@import "tailwindcss";
+
+:root {
+  /* Color Variables */
+  --primary: #b9ff66;
+  --secondary: #191a23;
+  --grey: #f3f3f3;
+  --black: #000;
+  --white: #fff;
+
+  /* Font Family */
+  --font-space-grotesk: "Space Grotesk", sans-serif;
+}
+
+/* Theme Styles */
+@theme {
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-grey: var(--grey);
+  --color-black: var(--black);
+  --color-white: var(--white);
+  --font-space-grotesk: var(--font-space-grotesk);
+}
+
+@layer base {
+  body {
+    @apply font-space-grotesk bg-white text-base font-normal text-black lg:text-lg;
+  }
+  span {
+    @apply text-primary;
+  }
+
+  /* Typography */
+  h1 {
+    @apply text-[43px] font-medium lg:text-6xl;
+  }
+  h2 {
+    @apply text-4xl font-medium lg:text-[40px];
+  }
+  h3 {
+    @apply text-[26px] font-medium lg:text-3xl;
+  }
+  h4 {
+    @apply text-lg font-medium lg:text-xl;
+  }
+  p {
+    @apply text-base lg:text-lg;
+  }
+}
