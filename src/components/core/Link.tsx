@@ -3,7 +3,7 @@ import { cn } from "../../lib/utils";
 import { FaArrowRight } from "react-icons/fa";
 
 const linkVariants = cva(
-  "cursor-pointer w-fit flex items-center gap-2 text-lg lg:text-xl",
+  "cursor-pointer w-fit flex items-center gap-3.5 text-lg lg:text-xl",
   {
     variants: {
       "text-color": {
