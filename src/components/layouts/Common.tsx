@@ -12,7 +12,7 @@ export default function CommonLayout({
       <Header />
 
       {/* Main */}
-      <main className="min-h-screen pt-24 lg:pt-30">{children}</main>
+      <main className="min-h-screen pt-22 lg:pt-30">{children}</main>
 
       {/* Footer */}
       <Footer />

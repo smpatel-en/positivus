@@ -1,38 +1,16 @@
+// Components
 import Logo from "../core/Logo";
-
-// Icons
-import { FaLinkedinIn } from "react-icons/fa6";
-import { FaFacebookF } from "react-icons/fa6";
-import { FaTwitter } from "react-icons/fa6";
 import Heading from "../core/Heading";
 import Button from "../core/Button";
 
+import { navigationLinks, socialLinks, contactInfo } from "../../lib/data";
+
 export default function Footer() {
-  const footerLinks = [
-    { name: "about us", href: "#" },
-    { name: "services", href: "#" },
-    { name: "use cases", href: "#" },
-    { name: "pricing", href: "#" },
-    { name: "blog", href: "#" },
-  ];
-
-  const footerSocialLinks = [
-    { icon: <FaLinkedinIn />, href: "#" },
-    { icon: <FaFacebookF />, href: "#" },
-    { icon: <FaTwitter />, href: "#" },
-  ];
-
-  const contactInfo = {
-    email: "info@positivus.com",
-    phone: "555-567-8901",
-    address: "1234 Main St Moonstone City, Stardust State 12345",
-  };
-
   return (
     <footer>
-      <div className="bg-secondary container rounded-t-[45px] p-12 text-white lg:p-16">
+      <div className="container p-0 lg:px-8">
         {/* Footer Wrapper */}
-        <div>
+        <div className="bg-secondary rounded-t-[45px] p-12 text-white lg:p-16">
           {/* Footer Top */}
           <div className="mb-12 flex flex-col items-center justify-between gap-4 md:flex-row lg:mb-16">
             {/* Footer Logo */}
@@ -40,7 +18,7 @@ export default function Footer() {
 
             {/* Footer Links */}
             <ul className="flex flex-col items-center gap-2 sm:flex-row md:gap-6 xl:gap-10">
-              {footerLinks.map((link) => (
+              {navigationLinks.map((link) => (
                 <li key={link.name}>
                   <a href={link.href} className="capitalize underline">
                     {link.name}
@@ -51,11 +29,11 @@ export default function Footer() {
 
             {/* Footer Social Links | Desktop */}
             <ul className="hidden gap-4 lg:flex">
-              {footerSocialLinks.map((link, index) => (
+              {socialLinks.map((link, index) => (
                 <li key={index}>
                   <a href={link.href} className="text-xl capitalize">
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-                      {link.icon}
+                      <link.icon />
                     </div>
                   </a>
                 </li>
@@ -75,18 +53,24 @@ export default function Footer() {
                 Contact Us:
               </Heading>
               <ul className="flex max-w-70 flex-col gap-5 sm:max-w-none">
-                <li className="hover:underline">
-                  <a href={`mailto:${contactInfo.email}`}>
+                <li>
+                  <a
+                    href={`mailto:${contactInfo.email}`}
+                    className="hover:underline"
+                  >
                     Email: {contactInfo.email}
                   </a>
                 </li>
-                <li className="hover:underline">
-                  <a href={`tel:${contactInfo.phone}`}>
+                <li>
+                  <a
+                    href={`tel:${contactInfo.phone}`}
+                    className="hover:underline"
+                  >
                     Phone: {contactInfo.phone}
                   </a>
                 </li>
-                <li className="hover:underline">
-                  <a href={contactInfo.address}>
+                <li>
+                  <a href={contactInfo.address} className="hover:underline">
                     Address: {contactInfo.address}
                   </a>
                 </li>
@@ -100,16 +84,18 @@ export default function Footer() {
                 placeholder="Email"
                 className="rounded-lg border border-white px-4 py-2 text-white placeholder:text-white lg:rounded-[14px] lg:px-6 lg:py-4"
               />
-              <Button className="w-full">Subscribe to news</Button>
+              <Button className="w-full whitespace-nowrap">
+                Subscribe to news
+              </Button>
             </div>
 
             {/* Footer Social Links | Mobile */}
             <ul className="flex gap-4 lg:hidden">
-              {footerSocialLinks.map((link, index) => (
+              {socialLinks.map((link, index) => (
                 <li key={index}>
                   <a href={link.href} className="text-lg capitalize">
                     <div className="text-secondary flex h-6 w-6 items-center justify-center rounded-full bg-white">
-                      {link.icon}
+                      <link.icon />
                     </div>
                   </a>
                 </li>

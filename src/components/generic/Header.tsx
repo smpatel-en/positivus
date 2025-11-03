@@ -1,19 +1,15 @@
 import React from "react";
+import { navigationLinks } from "../../lib/data";
 
+// Components
 import Logo from "../core/Logo";
 import Button from "../core/Button";
+
+// Icons
 import { TbMenu3 } from "react-icons/tb";
 
 export default function Header() {
   const [open, setOpen] = React.useState(false);
-
-  const navigationLinks = [
-    { name: "about us", href: "#" },
-    { name: "services", href: "#" },
-    { name: "use cases", href: "#" },
-    { name: "pricing", href: "#" },
-    { name: "blog", href: "#" },
-  ];
   const navigationCTA = { name: "Request a Quote", href: "#" };
 
   React.useEffect(() => {
@@ -44,7 +40,10 @@ export default function Header() {
             <ul className="hidden gap-6 lg:flex xl:gap-10">
               {navigationLinks.map((link) => (
                 <li key={link.name}>
-                  <a href={link.href} className="text-lg capitalize lg:text-xl">
+                  <a
+                    href={link.href}
+                    className="text-lg capitalize hover:underline lg:text-xl"
+                  >
                     {link.name}
                   </a>
                 </li>
@@ -75,7 +74,10 @@ export default function Header() {
                 <ul className="flex flex-col items-center gap-4">
                   {navigationLinks.map((link) => (
                     <li key={link.name}>
-                      <a href={link.href} className="text-lg capitalize">
+                      <a
+                        href={link.href}
+                        className="text-lg capitalize hover:underline"
+                      >
                         {link.name}
                       </a>
                     </li>

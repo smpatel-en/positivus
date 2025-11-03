@@ -8,6 +8,9 @@
   --black: #000;
   --white: #fff;
 
+  /* Shadow Card */
+  --shadow-card: 0 5px 0 0 var(--secondary);
+
   /* Font Family */
   --font-space-grotesk: "Space Grotesk", sans-serif;
 }
@@ -19,6 +22,7 @@
   --color-grey: var(--grey);
   --color-black: var(--black);
   --color-white: var(--white);
+  --shadow-card: var(--shadow-card);
   --font-space-grotesk: var(--font-space-grotesk);
 }
 
@@ -30,7 +34,13 @@
     @apply block h-full w-full object-cover;
   }
 
-  /* Container */
+  section {
+    @apply py-12 lg:py-16;
+  }
+  footer {
+    @apply pt-12 lg:pt-16;
+  }
+
   .container {
     @apply mx-auto !max-w-[1282px] px-6 lg:!max-w-[1298px] lg:px-8;
   }
@@ -51,4 +61,14 @@
   p {
     @apply text-base lg:text-lg;
   }
+}
+
+.fading-scroll {
+  background: linear-gradient(
+    to right,
+    var(--white) 0%,
+    transparent 10%,
+    transparent 90%,
+    var(--white) 100%
+  );
 }

@@ -1,29 +1,24 @@
-import { cva, type VariantProps } from "class-variance-authority";
 import { cn } from "../../lib/utils";
 
-const headingVariants = cva("w-fit px-[7px] rounded-[7px] py-0.5", {
-  variants: {
-    variant: {
-      primary: "bg-primary text-black",
-      secondary: "bg-secondary text-white",
-      white: "bg-white text-black",
-    },
-  },
-  defaultVariants: {
-    variant: "primary",
-  },
-});
+type HeadingVariant = "primary" | "secondary" | "white";
+
+const defaultClass = "h-fit w-fit rounded-[7px] px-[7px] py-0.5";
+const variantClasses: Record<HeadingVariant, string> = {
+  primary: "bg-primary text-black",
+  secondary: "bg-secondary text-white",
+  white: "bg-white text-black",
+};
 
 interface HeadingProps
-  extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement>,
-    VariantProps<typeof headingVariants> {
+  extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement> {
   children: React.ReactNode;
   as?: "h1" | "h2" | "h3" | "h4" | "p";
+  variant?: HeadingVariant;
 }
 
 export default function Heading({
   children,
-  variant,
+  variant = "primary",
   as: Component = "h2",
   className,
   ...props
@@ -31,7 +26,7 @@ export default function Heading({
   return (
     <Component
       {...props}
-      className={cn(headingVariants({ variant }), className)}
+      className={cn(defaultClass, variantClasses[variant], className)}
     >
       {children}
     </Component>
