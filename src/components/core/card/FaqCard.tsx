@@ -8,12 +8,18 @@ interface FAQcardProps extends React.HTMLAttributes<HTMLDivElement> {
   description: string;
 }
 
-export default function FAQcard({ index, title, description }: FAQcardProps) {
+export default function FAQcard({
+  index,
+  title,
+  description,
+  ...props
+}: FAQcardProps) {
   const [isOpen, setIsOpen] = React.useState(false);
 
   return (
     <div
-      className={`lg:rounded-primary shadow-card rounded-3xl p-6 transition-colors duration-300 lg:px-15 lg:py-10 ${isOpen ? "bg-primary" : "bg-grey"}`}
+      className={`lg:rounded-primary shadow-card border-secondary rounded-3xl border p-6 transition-colors duration-300 lg:px-15 lg:py-10 ${isOpen ? "bg-primary" : "bg-grey"}`}
+      {...props}
     >
       {/* Visible Part */}
       <div className="flex items-center gap-6">
@@ -24,7 +30,7 @@ export default function FAQcard({ index, title, description }: FAQcardProps) {
 
         <button
           aria-label="Expand FAQ "
-          className="ml-auto grid h-10 w-10 shrink-0 place-items-center rounded-full border border-black lg:h-15 lg:w-15"
+          className="bg-grey ml-auto grid h-10 w-10 shrink-0 place-items-center rounded-full border border-black lg:h-15 lg:w-15"
           onClick={() => setIsOpen(!isOpen)}
         >
           <FaPlus

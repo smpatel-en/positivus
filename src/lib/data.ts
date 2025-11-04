@@ -137,6 +137,7 @@ export const teamMembersData = [
     role: "CEO and Founder",
     description:
       "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    linkedIn: "#",
     image: TeamMember1,
   },
   {
@@ -144,6 +145,7 @@ export const teamMembersData = [
     role: "CEO and Founder",
     description:
       "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    linkedIn: "#",
     image: TeamMember1,
   },
   {
@@ -151,6 +153,7 @@ export const teamMembersData = [
     role: "CEO and Founder",
     description:
       "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    linkedIn: "#",
     image: TeamMember1,
   },
   {
@@ -158,6 +161,7 @@ export const teamMembersData = [
     role: "CEO and Founder",
     description:
       "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    linkedIn: "#",
     image: TeamMember1,
   },
   {
@@ -165,6 +169,7 @@ export const teamMembersData = [
     role: "CEO and Founder",
     description:
       "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    linkedIn: "#",
     image: TeamMember1,
   },
   {
@@ -172,6 +177,7 @@ export const teamMembersData = [
     role: "CEO and Founder",
     description:
       "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    linkedIn: "#",
     image: TeamMember1,
   },
 ];
