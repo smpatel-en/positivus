@@ -4,10 +4,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { useRef } from "react";
 import { FaArrowLeft, FaArrowRight } from "react-icons/fa6";
 
-import "swiper/css";
-import "swiper/css/pagination";
-import "swiper/css/navigation";
-
 import { Pagination, Navigation } from "swiper/modules";
 import type { Swiper as SwiperType } from "swiper";
 
@@ -27,19 +23,31 @@ export default function Testimonials() {
           />
 
           {/* Section Body */}
-          <div className="bg-secondary lg:rounded-primary rounded-3xl py-20 text-white">
+          <div className="bg-secondary lg:rounded-primary rounded-3xl p-4 text-white sm:px-0 sm:py-10 md:py-16 lg:py-20">
             {/* Testimonial Slider */}
             <Swiper
               centeredSlides={true}
-              slidesPerView={2}
-              spaceBetween={30}
+              slidesPerView={1}
+              spaceBetween={20}
+              breakpoints={{
+                768: {
+                  slidesPerView: 1.5,
+                  spaceBetween: 25,
+                },
+                1024: {
+                  slidesPerView: 2,
+                  spaceBetween: 30,
+                },
+              }}
               pagination={{
                 clickable: true,
                 el: ".custom-swiper-pagination",
                 bulletClass: "custom-swiper-bullet",
                 renderBullet: function (index, className) {
                   return (
-                    '<span class="' +
+                    "<span key=" +
+                    index +
+                    ' class="' +
                     className +
                     '">' +
                     '<svg width="14" height="14" viewBox="0 0 14 14"  xmlns="http://www.w3.org/2000/svg">' +
@@ -64,11 +72,11 @@ export default function Testimonials() {
               {/* Testimonial Item */}
               {testimonialsData.map((testimonial, index) => (
                 <SwiperSlide key={index}>
-                  <div className="lg:rounded-primary border-primary mb-10 rounded-3xl border p-8 lg:p-12">
+                  <div className="lg:rounded-primary border-primary mb-6 rounded-3xl border p-6 md:mb-8 md:p-8 lg:mb-10 lg:p-12">
                     <p>"{testimonial.content}"</p>
                     <div></div>
                   </div>
-                  <div className="mx-auto max-w-[80%]">
+                  <div className="mx-auto max-w-[90%] md:max-w-[80%]">
                     <h4 className="text-primary">{testimonial.author}</h4>
                     <p>{testimonial.position}</p>
                   </div>
@@ -77,13 +85,13 @@ export default function Testimonials() {
             </Swiper>
 
             {/* Custom Pagination and Navigation */}
-            <div className="mx-auto mt-15 flex max-w-[50%] items-center justify-between gap-6 lg:mt-30">
+            <div className="mx-auto mt-8 flex max-w-[90%] items-center justify-between gap-4 md:mt-12 md:max-w-[70%] md:gap-6 lg:mt-15 lg:max-w-[50%]">
               {/* Previous Button */}
               <button
                 className="custom-swiper-prev hover:text-primary cursor-pointer transition-all"
                 aria-label="Previous slide"
               >
-                <FaArrowLeft className="text-2xl" />
+                <FaArrowLeft className="text-xl md:text-2xl" />
               </button>
 
               {/* Pagination Dots */}
@@ -94,7 +102,7 @@ export default function Testimonials() {
                 className="custom-swiper-next hover:text-primary cursor-pointer transition-all"
                 aria-label="Next slide"
               >
-                <FaArrowRight className="text-2xl" />
+                <FaArrowRight className="text-xl md:text-2xl" />
               </button>
             </div>
           </div>
