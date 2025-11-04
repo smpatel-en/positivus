@@ -16,7 +16,7 @@ export default function CaseStudies() {
           />
 
           {/* Section Body | Case Studies Wrapper */}
-          <div className="bg-secondary rounded-primary grid grid-cols-1 px-8 py-0 text-white md:grid-cols-3 md:gap-y-10 md:px-0 md:py-12 lg:py-[70px]">
+          <div className="bg-secondary lg:rounded-primary grid grid-cols-1 rounded-3xl px-8 py-0 text-white md:grid-cols-3 md:gap-y-10 md:px-0 md:py-12 lg:py-[70px]">
             {caseStudiesData.map((caseStudy, index) => (
               // Case Study Item
               <div

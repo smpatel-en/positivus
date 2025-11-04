@@ -1,23 +1,10 @@
 // Marquee Package
 import Marquee from "react-fast-marquee";
+import { clientLogos } from "../../../lib/data";
 
 // Client Logos
-import ClientLogo1 from "../../../assets/images/company-logo-1.png";
-import ClientLogo2 from "../../../assets/images/company-logo-2.png";
-import ClientLogo3 from "../../../assets/images/company-logo-3.png";
-import ClientLogo4 from "../../../assets/images/company-logo-4.png";
-import ClientLogo5 from "../../../assets/images/company-logo-5.png";
-import ClientLogo6 from "../../../assets/images/company-logo-6.png";
 
 export default function Clients() {
-  const clientLogos = [
-    ClientLogo1,
-    ClientLogo2,
-    ClientLogo3,
-    ClientLogo4,
-    ClientLogo5,
-    ClientLogo6,
-  ];
   return (
     <section>
       <div className="container">

@@ -3,6 +3,17 @@ import { FaLinkedinIn } from "react-icons/fa6";
 import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 
+// Client Logos
+import ClientLogo1 from "../assets/images/company-logo-1.png";
+import ClientLogo2 from "../assets/images/company-logo-2.png";
+import ClientLogo3 from "../assets/images/company-logo-3.png";
+import ClientLogo4 from "../assets/images/company-logo-4.png";
+import ClientLogo5 from "../assets/images/company-logo-5.png";
+import ClientLogo6 from "../assets/images/company-logo-6.png";
+
+// Team member images
+import TeamMember1 from "../assets/images/member-pfp.jfif";
+
 // Images
 import serviceImage1 from "../assets/images/tokyo-magnifier-web-search-with-elements.png";
 import serviceImage2 from "../assets/images/tokyo-selecting-a-value-in-the-browser-window.png";
@@ -29,6 +40,15 @@ export const contactInfo = {
   phone: "555-567-8901",
   address: "1234 Main St Moonstone City, Stardust State 12345",
 };
+
+export const clientLogos = [
+  ClientLogo1,
+  ClientLogo2,
+  ClientLogo3,
+  ClientLogo4,
+  ClientLogo5,
+  ClientLogo6,
+];
 
 export const servicesData = [
   {
@@ -78,7 +98,7 @@ export const caseStudiesData = [
   },
 ];
 
-export const WorkingProcessSteps = [
+export const workingProcessSteps = [
   {
     title: "Consultation",
     description:
@@ -108,5 +128,83 @@ export const WorkingProcessSteps = [
     title: "Continual Improvement",
     description:
       "Digital marketing is an ongoing process, and we are committed to continually improving our strategies and tactics to ensure that our clients stay ahead of the competition. We stay up-to-date with the latest industry trends and best practices to provide the best possible service.",
+  },
+];
+
+export const teamMembersData = [
+  {
+    name: "John Smith",
+    role: "CEO and Founder",
+    description:
+      "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    image: TeamMember1,
+  },
+  {
+    name: "John Smith",
+    role: "CEO and Founder",
+    description:
+      "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    image: TeamMember1,
+  },
+  {
+    name: "John Smith",
+    role: "CEO and Founder",
+    description:
+      "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    image: TeamMember1,
+  },
+  {
+    name: "John Smith",
+    role: "CEO and Founder",
+    description:
+      "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    image: TeamMember1,
+  },
+  {
+    name: "John Smith",
+    role: "CEO and Founder",
+    description:
+      "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    image: TeamMember1,
+  },
+  {
+    name: "John Smith",
+    role: "CEO and Founder",
+    description:
+      "10+ years of experience in digital marketing. Expertise in SEO, PPC, and content strategy",
+    image: TeamMember1,
+  },
+];
+
+export const testimonialsData = [
+  {
+    author: "John Smith",
+    position: "Marketing Director at XYZ Corp",
+    content:
+      "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    author: "John Smith",
+    position: "Marketing Director at XYZ Corp",
+    content:
+      "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    author: "John Smith",
+    position: "Marketing Director at XYZ Corp",
+    content:
+      "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    author: "John Smith",
+    position: "Marketing Director at XYZ Corp",
+    content:
+      "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
+  },
+  {
+    author: "John Smith",
+    position: "Marketing Director at XYZ Corp",
+    content:
+      "We have been working with Positivus for the past year and have seen a significant increase in website traffic and leads as a result of their efforts. The team is professional, responsive, and truly cares about the success of our business. We highly recommend Positivus to any company looking to grow their online presence.",
   },
 ];

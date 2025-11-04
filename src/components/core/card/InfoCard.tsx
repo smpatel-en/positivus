@@ -6,7 +6,7 @@ import Link from "../Link";
 type CardVariant = "primary" | "secondary" | "tertiary";
 
 const defaultClass =
-  "bg-grey shadow-card border-secondary flex flex-col sm:flex-row justify-between gap-4 rounded-primary border p-8 md:p-12 min-h-60 lg:min-h-78";
+  "bg-grey shadow-card border-secondary flex flex-col sm:flex-row justify-between gap-4 lg:rounded-primary rounded-3xl border p-8 md:p-12 min-h-60 lg:min-h-78";
 const variantClasses: Record<CardVariant, string> = {
   primary: "bg-grey",
   secondary: "bg-primary",

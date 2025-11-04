@@ -13,7 +13,7 @@ export default function FAQcard({ index, title, description }: FAQcardProps) {
 
   return (
     <div
-      className={`rounded-primary shadow-card p-6 transition-colors duration-300 lg:px-15 lg:py-10 ${isOpen ? "bg-primary" : "bg-grey"}`}
+      className={`lg:rounded-primary shadow-card rounded-3xl p-6 transition-colors duration-300 lg:px-15 lg:py-10 ${isOpen ? "bg-primary" : "bg-grey"}`}
     >
       {/* Visible Part */}
       <div className="flex items-center gap-6">

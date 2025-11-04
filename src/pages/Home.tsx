@@ -7,10 +7,13 @@ import Clients from "../components/generic/sections/Clients";
 import Services from "../components/generic/sections/Services";
 import CtaBanner from "../components/generic/sections/CtaBanner";
 import CaseStudies from "../components/generic/sections/CaseStudies";
+import WorkingProcess from "../components/generic/sections/WorkingProcess";
+import Team from "../components/generic/sections/Team";
+import Testimonials from "../components/generic/sections/Testimonials";
+import ContactUs from "../components/generic/sections/ContactUs";
 
 // Image
 import CTAImage from "../assets/images/face-and-stars-illustration.png";
-import WorkingProcess from "../components/generic/sections/WorkingProcess";
 
 export default function Home() {
   return (
@@ -27,6 +30,9 @@ export default function Home() {
       />
       <CaseStudies />
       <WorkingProcess />
+      <Team />
+      <Testimonials />
+      <ContactUs />
     </CommonLayout>
   );
 }

@@ -21,7 +21,10 @@ export default function Footer() {
               {navigationLinks.map((link) => (
                 // Navigation Link Item
                 <li key={link.name}>
-                  <a href={link.href} className="capitalize underline">
+                  <a
+                    href={link.href}
+                    className="hover:text-primary capitalize underline transition-colors duration-300"
+                  >
                     {link.name}
                   </a>
                 </li>
@@ -65,7 +68,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={`mailto:${contactInfo.email}`}
-                    className="hover:underline"
+                    className="hover:text-primary transition-colors duration-300 hover:underline"
                   >
                     Email: {contactInfo.email}
                   </a>
@@ -75,7 +78,7 @@ export default function Footer() {
                 <li>
                   <a
                     href={`tel:${contactInfo.phone}`}
-                    className="hover:underline"
+                    className="hover:text-primary transition-colors duration-300 hover:underline"
                   >
                     Phone: {contactInfo.phone}
                   </a>
@@ -83,7 +86,10 @@ export default function Footer() {
 
                 {/* Address */}
                 <li>
-                  <a href={contactInfo.address} className="hover:underline">
+                  <a
+                    href={contactInfo.address}
+                    className="hover:text-primary transition-colors duration-300 hover:underline"
+                  >
                     Address: {contactInfo.address}
                   </a>
                 </li>
@@ -132,7 +138,10 @@ export default function Footer() {
             </p>
 
             {/* Privacy Policy */}
-            <a href="#" className="h-fit whitespace-nowrap underline">
+            <a
+              href="#"
+              className="hover:text-primary h-fit whitespace-nowrap underline transition-colors duration-300"
+            >
               Privacy Policy
             </a>
           </div>

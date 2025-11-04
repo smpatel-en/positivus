@@ -1,6 +1,6 @@
 import SectionHeading from "../SectionHeading";
-import { WorkingProcessSteps } from "../../../lib/data";
-import FAQcard from "../../core/card/FAQcard";
+import { workingProcessSteps } from "../../../lib/data";
+import FAQcard from "../../core/card/FaqCard";
 
 export default function WorkingProcess() {
   return (
@@ -16,12 +16,12 @@ export default function WorkingProcess() {
 
           {/* Section Body | Steps Wrapper */}
           <div className="flex flex-col gap-4 lg:gap-7">
-            {WorkingProcessSteps.map((step, index) => (
+            {workingProcessSteps.map((step, index) => (
               // Step Item
               <FAQcard
                 key={index}
                 index={
-                  WorkingProcessSteps.length < 10 ? `0${index + 1}` : index + 1
+                  workingProcessSteps.length < 10 ? `0${index + 1}` : index + 1
                 }
                 title={step.title}
                 description={step.description}
