@@ -23,8 +23,10 @@ export default function Clients() {
       <div className="container">
         {/* Section Wrapper */}
         <div className="relative">
+          {/* Marquee Component | Client Logo Wrapper */}
           <Marquee autoFill={true} speed={50}>
             {clientLogos.map((logo, index) => (
+              // Client Logo Image
               <img
                 key={index}
                 className="max-h-10 px-5 grayscale lg:max-h-12 lg:px-10"

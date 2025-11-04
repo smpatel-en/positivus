@@ -5,10 +5,12 @@ import CommonLayout from "../components/layouts/Common";
 import Hero from "../components/generic/sections/Hero";
 import Clients from "../components/generic/sections/Clients";
 import Services from "../components/generic/sections/Services";
-import CTABanner from "../components/core/CTAbanner";
+import CtaBanner from "../components/generic/sections/CtaBanner";
+import CaseStudies from "../components/generic/sections/CaseStudies";
 
 // Image
 import CTAImage from "../assets/images/face-and-stars-illustration.png";
+import WorkingProcess from "../components/generic/sections/WorkingProcess";
 
 export default function Home() {
   return (
@@ -16,13 +18,15 @@ export default function Home() {
       <Hero />
       <Clients />
       <Services />
-      <CTABanner
+      <CtaBanner
         title="Let’s make things happen"
         description="Contact us today to learn more about how our digital marketing services can help your business grow and succeed online."
         buttonText="Get your free proposal"
         buttonLink="#"
         Image={CTAImage}
       />
+      <CaseStudies />
+      <WorkingProcess />
     </CommonLayout>
   );
 }

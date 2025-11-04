@@ -1,4 +1,4 @@
-import Button from "./Button";
+import Button from "../../core/Button";
 
 interface CTABannerProps {
   title: string;
@@ -19,11 +19,16 @@ export default function CTABanner({
     <section>
       <div className="container">
         {/* Section Wrapper */}
-        <div className="bg-grey relative grid grid-cols-1 items-center gap-10 rounded-[45px] p-10 md:grid-cols-2 lg:p-15">
+        <div className="bg-grey rounded-primary relative grid grid-cols-1 items-center gap-10 p-10 md:grid-cols-2 lg:p-15">
           {/* Text Content */}
           <div className="flex flex-col gap-6">
+            {/* Title */}
             <h2>{title}</h2>
+
+            {/* Description */}
             <p>{description}</p>
+
+            {/* CTA Button */}
             <Button href={buttonLink} variant="secondary">
               {buttonText}
             </Button>

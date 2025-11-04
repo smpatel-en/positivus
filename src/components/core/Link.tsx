@@ -1,20 +1,39 @@
 import { cn } from "../../lib/utils";
 import { FaArrowRight } from "react-icons/fa";
 
-type TextColor = "white" | "black";
+type TextColor = "primary" | "white" | "black";
+type IconColor = "primary" | "black" | "white";
+type IconBg = "primary" | "secondary" | "white";
+type Variant = "filled" | "simple";
 
 const defaultClass =
   "flex w-fit cursor-pointer items-center gap-3.5 text-lg lg:text-xl";
 const textColorClasses: Record<TextColor, string> = {
+  primary: "text-primary",
   white: "text-white",
   black: "text-black",
+};
+const iconColorClasses: Record<IconColor, string> = {
+  primary: "text-primary",
+  black: "text-black",
+  white: "text-white",
+};
+const iconBgClasses: Record<IconBg, string> = {
+  primary: "bg-primary",
+  secondary: "bg-secondary",
+  white: "bg-white",
+};
+const variantClasses: Record<Variant, string> = {
+  filled: "",
+  simple: "bg-transparent",
 };
 
 interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
   children: React.ReactNode;
   "text-color"?: TextColor;
-  "icon-color"?: "primary" | "black" | "white";
-  "icon-bg"?: "primary" | "secondary" | "white";
+  "icon-color"?: IconColor;
+  "icon-bg"?: IconBg;
+  variant?: Variant;
 }
 
 export default function Link({
@@ -22,18 +41,30 @@ export default function Link({
   "text-color": textColor = "black",
   "icon-color": iconColor = "primary",
   "icon-bg": iconBg = "white",
+  variant = "filled",
   className,
   ...props
 }: LinkProps) {
   return (
     <a
       {...props}
-      className={cn(defaultClass, textColorClasses[textColor], className)}
+      className={cn(
+        defaultClass,
+        textColorClasses[textColor],
+        variant === "simple" ? "flex-row-reverse" : "",
+        className,
+      )}
     >
       <div
-        className={`bg-${iconBg} flex h-8 w-8 items-center justify-center rounded-full lg:h-10 lg:w-10`}
+        className={cn(
+          "flex h-8 w-8 items-center justify-center rounded-full lg:h-10 lg:w-10",
+          iconBgClasses[iconBg],
+          variantClasses[variant],
+        )}
       >
-        <FaArrowRight className={`text-${iconColor} -rotate-30 text-2xl`} />
+        <FaArrowRight
+          className={cn("-rotate-30 text-2xl", iconColorClasses[iconColor])}
+        />
       </div>
       {children}
     </a>

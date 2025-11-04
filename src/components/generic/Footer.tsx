@@ -10,7 +10,7 @@ export default function Footer() {
     <footer>
       <div className="container p-0 lg:px-8">
         {/* Footer Wrapper */}
-        <div className="bg-secondary rounded-t-[45px] p-12 text-white lg:p-16">
+        <div className="bg-secondary rounded-t-primary p-12 text-white lg:p-16">
           {/* Footer Top */}
           <div className="mb-12 flex flex-col items-center justify-between gap-4 md:flex-row lg:mb-16">
             {/* Footer Logo */}
@@ -19,6 +19,7 @@ export default function Footer() {
             {/* Footer Links */}
             <ul className="flex flex-col items-center gap-2 sm:flex-row md:gap-6 xl:gap-10">
               {navigationLinks.map((link) => (
+                // Navigation Link Item
                 <li key={link.name}>
                   <a href={link.href} className="capitalize underline">
                     {link.name}
@@ -30,8 +31,13 @@ export default function Footer() {
             {/* Footer Social Links | Desktop */}
             <ul className="hidden gap-4 lg:flex">
               {socialLinks.map((link, index) => (
+                // Social Link Item
                 <li key={index}>
-                  <a href={link.href} className="text-xl capitalize">
+                  <a
+                    title={link.title}
+                    href={link.href}
+                    className="text-xl capitalize"
+                  >
                     <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
                       <link.icon />
                     </div>
@@ -52,7 +58,10 @@ export default function Footer() {
               >
                 Contact Us:
               </Heading>
+
+              {/* Contact Info List */}
               <ul className="flex max-w-70 flex-col gap-5 sm:max-w-none">
+                {/* Email */}
                 <li>
                   <a
                     href={`mailto:${contactInfo.email}`}
@@ -61,6 +70,8 @@ export default function Footer() {
                     Email: {contactInfo.email}
                   </a>
                 </li>
+
+                {/* Phone */}
                 <li>
                   <a
                     href={`tel:${contactInfo.phone}`}
@@ -69,6 +80,8 @@ export default function Footer() {
                     Phone: {contactInfo.phone}
                   </a>
                 </li>
+
+                {/* Address */}
                 <li>
                   <a href={contactInfo.address} className="hover:underline">
                     Address: {contactInfo.address}
@@ -79,11 +92,14 @@ export default function Footer() {
 
             {/* Newsletter Signup */}
             <div className="flex w-fit flex-col items-center gap-6 rounded-lg bg-[#292A32] p-6 sm:flex-row sm:p-10 lg:gap-10">
+              {/* Newsletter Input */}
               <input
                 type="email"
                 placeholder="Email"
                 className="rounded-lg border border-white px-4 py-2 text-white placeholder:text-white lg:rounded-[14px] lg:px-6 lg:py-4"
               />
+
+              {/* Subscribe Button */}
               <Button className="w-full whitespace-nowrap">
                 Subscribe to news
               </Button>
@@ -92,8 +108,13 @@ export default function Footer() {
             {/* Footer Social Links | Mobile */}
             <ul className="flex gap-4 lg:hidden">
               {socialLinks.map((link, index) => (
+                // Social Link Item
                 <li key={index}>
-                  <a href={link.href} className="text-lg capitalize">
+                  <a
+                    title={link.title}
+                    href={link.href}
+                    className="text-lg capitalize"
+                  >
                     <div className="text-secondary flex h-6 w-6 items-center justify-center rounded-full bg-white">
                       <link.icon />
                     </div>
@@ -105,10 +126,13 @@ export default function Footer() {
 
           {/* Footer Bottom */}
           <div className="flex justify-center gap-4 border-t border-white pt-12 capitalize lg:justify-start lg:gap-12 lg:pt-16">
+            {/* Copyright */}
             <p className="inline">
               &copy; {new Date().getFullYear()} Positivus. All rights reserved.
             </p>
-            <a href="#" className="whitespace-nowrap underline">
+
+            {/* Privacy Policy */}
+            <a href="#" className="h-fit whitespace-nowrap underline">
               Privacy Policy
             </a>
           </div>

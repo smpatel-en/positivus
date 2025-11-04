@@ -17,6 +17,7 @@ export default function Services() {
           {/* Section Body | Card Wrapper */}
           <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
             {servicesData.map((service, index) => (
+              // Card Component
               <InfoCard
                 variant={
                   index % 3 === 0

@@ -11,6 +11,9 @@
   /* Shadow Card */
   --shadow-card: 0 5px 0 0 var(--secondary);
 
+  /* Border Radius */
+  --border-radius: 45px;
+
   /* Font Family */
   --font-space-grotesk: "Space Grotesk", sans-serif;
 }
@@ -23,12 +26,13 @@
   --color-black: var(--black);
   --color-white: var(--white);
   --shadow-card: var(--shadow-card);
+  --radius-primary: var(--border-radius);
   --font-space-grotesk: var(--font-space-grotesk);
 }
 
 @layer base {
   body {
-    @apply font-space-grotesk bg-white text-base font-normal text-black lg:text-lg;
+    @apply font-space-grotesk selection:bg-primary bg-white text-base font-normal text-black selection:text-black lg:text-lg;
   }
   img {
     @apply block h-full w-full object-cover;
@@ -53,7 +57,7 @@
     @apply text-4xl font-medium lg:text-[40px];
   }
   h3 {
-    @apply text-[26px] font-medium lg:text-3xl;
+    @apply text-[26px] leading-[1.4] font-medium lg:text-3xl;
   }
   h4 {
     @apply text-lg font-medium lg:text-xl;

@@ -2,12 +2,14 @@ import { cn } from "../../lib/utils";
 
 type HeadingVariant = "primary" | "secondary" | "white";
 
-const defaultClass = "h-fit w-fit rounded-[7px] px-[7px] py-0.5";
+const defaultClass = "w-fit";
 const variantClasses: Record<HeadingVariant, string> = {
   primary: "bg-primary text-black",
   secondary: "bg-secondary text-white",
   white: "bg-white text-black",
 };
+
+const highlightClass = "px-[7px] py-0.5 rounded-[7px] box-decoration-clone";
 
 interface HeadingProps
   extends React.HTMLAttributes<HTMLHeadingElement | HTMLParagraphElement> {
@@ -24,11 +26,10 @@ export default function Heading({
   ...props
 }: HeadingProps) {
   return (
-    <Component
-      {...props}
-      className={cn(defaultClass, variantClasses[variant], className)}
-    >
-      {children}
+    <Component {...props} className={cn(defaultClass, className)}>
+      <span className={cn(highlightClass, variantClasses[variant], "inline")}>
+        {children}
+      </span>
     </Component>
   );
 }
