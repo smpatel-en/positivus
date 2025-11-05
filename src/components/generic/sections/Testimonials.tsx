@@ -23,7 +23,7 @@ export default function Testimonials() {
           />
 
           {/* Section Body */}
-          <div className="bg-secondary lg:rounded-primary rounded-3xl p-4 text-white sm:px-0 sm:py-10 md:py-16 lg:py-20">
+          <div className="bg-secondary lg:rounded-primary rounded-3xl p-4 text-white sm:py-10 md:px-0 md:py-16 lg:py-20">
             {/* Testimonial Slider */}
             <Swiper
               centeredSlides={true}

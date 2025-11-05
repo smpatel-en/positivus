@@ -3,7 +3,12 @@ import Logo from "../core/Logo";
 import Heading from "../core/Heading";
 import Button from "../core/Button";
 
-import { navigationLinks, socialLinks, contactInfo } from "../../lib/data";
+import {
+  navigationLinks,
+  socialLinks,
+  contactInfo,
+  themeData,
+} from "../../lib/data";
 
 export default function Footer() {
   return (
@@ -39,7 +44,7 @@ export default function Footer() {
                   <a
                     title={link.title}
                     href={link.href}
-                    className="hover:bg-primary flex h-8 w-8 items-center justify-center rounded-full bg-white text-xl text-black transition-colors duration-300"
+                    className="hover:bg-primary flex h-8 w-8 items-center justify-center rounded-full bg-white text-xl text-black transition-all duration-300 hover:scale-105"
                   >
                     <link.icon />
                   </a>
@@ -95,19 +100,19 @@ export default function Footer() {
             </div>
 
             {/* Newsletter Signup */}
-            <div className="flex w-fit flex-col items-center gap-6 rounded-lg bg-[#292A32] p-6 sm:flex-row sm:p-10 lg:gap-10">
+            <form className="flex w-fit flex-col items-center gap-6 rounded-lg bg-[#292A32] p-6 sm:flex-row sm:p-10 lg:gap-10">
               {/* Newsletter Input */}
               <input
                 type="email"
                 placeholder="Email"
-                className="rounded-lg border border-white px-4 py-2 text-white placeholder:text-white lg:rounded-[14px] lg:px-6 lg:py-4"
+                className="focus:border-primary transition-color rounded-lg border-2 border-white px-4 py-2 text-white duration-300 outline-none placeholder:text-white lg:rounded-[14px] lg:px-6 lg:py-4"
               />
 
               {/* Subscribe Button */}
-              <Button className="w-full whitespace-nowrap">
+              <Button type="submit" className="w-full whitespace-nowrap">
                 Subscribe to news
               </Button>
-            </div>
+            </form>
 
             {/* Footer Social Links | Mobile */}
             <ul className="flex gap-4 lg:hidden">
@@ -127,7 +132,7 @@ export default function Footer() {
           </div>
 
           {/* Footer Bottom */}
-          <div className="flex justify-center gap-4 border-t border-white pt-12 capitalize lg:justify-start lg:gap-12 lg:pt-16">
+          <div className="flex flex-col justify-center gap-4 border-t border-white pt-12 capitalize sm:flex-row lg:justify-start lg:gap-12 lg:pt-16">
             {/* Copyright */}
             <p className="inline">
               &copy; {new Date().getFullYear()} Positivus. All rights reserved.
@@ -140,6 +145,21 @@ export default function Footer() {
             >
               Privacy Policy
             </a>
+            <div className="ml-auto flex items-center gap-2">
+              {themeData.map((color, index) => (
+                <div
+                  key={index}
+                  className="h-5 w-5 cursor-pointer rounded-full"
+                  style={{ backgroundColor: color }}
+                  onClick={() => {
+                    document.documentElement.style.setProperty(
+                      "--primary",
+                      color,
+                    );
+                  }}
+                ></div>
+              ))}
+            </div>
           </div>
         </div>
       </div>

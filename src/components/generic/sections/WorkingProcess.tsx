@@ -1,8 +1,11 @@
 import SectionHeading from "../SectionHeading";
 import { workingProcessSteps } from "../../../lib/data";
 import FAQcard from "../../core/card/FaqCard";
+import React from "react";
 
 export default function WorkingProcess() {
+  const [activeIndex, setActiveIndex] = React.useState(0);
+
   return (
     <section>
       <div className="container">
@@ -19,12 +22,14 @@ export default function WorkingProcess() {
             {workingProcessSteps.map((step, index) => (
               // Step Item
               <FAQcard
+                active={index === activeIndex}
                 key={index}
                 index={
                   workingProcessSteps.length < 10 ? `0${index + 1}` : index + 1
                 }
                 title={step.title}
                 description={step.description}
+                onClick={() => setActiveIndex(index)}
               />
             ))}
           </div>

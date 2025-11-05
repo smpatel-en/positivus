@@ -43,7 +43,7 @@ export default function ProfileCard({
           {/* LinkedIn Link */}
           <a
             href={linkedIn}
-            className="bg-secondary text-primary ml-auto grid h-8 w-8 shrink-0 place-items-center rounded-full"
+            className="bg-secondary text-primary ml-auto grid h-8 w-8 shrink-0 place-items-center rounded-full transition-all duration-300 hover:scale-110"
           >
             <FaLinkedinIn />
           </a>

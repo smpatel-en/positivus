@@ -6,15 +6,21 @@ interface FAQcardProps extends React.HTMLAttributes<HTMLDivElement> {
   index: number | string;
   title: string;
   description: string;
+  active?: boolean;
 }
 
 export default function FAQcard({
   index,
   title,
   description,
+  active = false,
   ...props
 }: FAQcardProps) {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = React.useState(active);
+
+  React.useEffect(() => {
+    setIsOpen(active);
+  }, [active]);
 
   return (
     <div
@@ -30,11 +36,11 @@ export default function FAQcard({
 
         <button
           aria-label="Expand FAQ "
-          className="bg-grey ml-auto grid h-10 w-10 shrink-0 place-items-center rounded-full border border-black lg:h-15 lg:w-15"
+          className="bg-grey group ml-auto grid h-10 w-10 shrink-0 cursor-pointer place-items-center rounded-full border border-black lg:h-15 lg:w-15"
           onClick={() => setIsOpen(!isOpen)}
         >
           <FaPlus
-            className={`text-xl transition-all duration-300 lg:text-3xl ${isOpen ? "rotate-45" : ""}`}
+            className={`text-xl transition-transform duration-300 lg:text-3xl ${isOpen ? "rotate-45" : "group-hover:rotate-15"}`}
           />
         </button>
       </div>

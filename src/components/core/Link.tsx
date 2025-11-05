@@ -7,7 +7,7 @@ type IconBg = "primary" | "secondary" | "white";
 type Variant = "filled" | "simple";
 
 const defaultClass =
-  "flex w-fit cursor-pointer items-center gap-3.5 text-lg lg:text-xl";
+  "flex w-fit cursor-pointer items-center gap-3.5 text-lg lg:text-xl group hover:underline";
 const textColorClasses: Record<TextColor, string> = {
   primary: "text-primary",
   white: "text-white",
@@ -57,13 +57,16 @@ export default function Link({
     >
       <div
         className={cn(
-          "flex h-8 w-8 items-center justify-center rounded-full lg:h-10 lg:w-10",
+          "flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-105 lg:h-10 lg:w-10",
           iconBgClasses[iconBg],
           variantClasses[variant],
         )}
       >
         <FaArrowRight
-          className={cn("-rotate-30 text-2xl", iconColorClasses[iconColor])}
+          className={cn(
+            "gropu-hover:rotate-0 grop -rotate-30 text-2xl transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1",
+            iconColorClasses[iconColor],
+          )}
         />
       </div>
       {children}

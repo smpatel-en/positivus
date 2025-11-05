@@ -62,7 +62,7 @@ export default function Header() {
             {/* Mobile Navigation Button */}
             <div className="lg:hidden">
               <Button variant="primary" onClick={toggleMenu}>
-                <TbMenu3 size={30} />
+                <TbMenu3 className="text-xl sm:text-3xl" />
               </Button>
             </div>
           </div>

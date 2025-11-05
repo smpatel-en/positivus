@@ -58,7 +58,7 @@
 
   input,
   textarea {
-    @apply focus:outline-secondary;
+    @apply focus:outline-secondary ring-0 outline outline-transparent transition-all duration-300;
   }
 
   .container {
