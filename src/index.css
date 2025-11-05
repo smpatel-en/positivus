@@ -42,7 +42,11 @@
     @apply selection:bg-primary bg-white text-base font-normal text-black selection:text-black lg:text-lg;
   }
   img {
-    @apply block h-full w-full object-cover;
+    @apply pointer-events-none block h-full w-full object-cover;
+  }
+  svg,
+  img {
+    @apply pointer-events-none select-none;
   }
 
   span {

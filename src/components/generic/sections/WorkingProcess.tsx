@@ -24,12 +24,10 @@ export default function WorkingProcess() {
               <FAQcard
                 active={index === activeIndex}
                 key={index}
-                index={
-                  workingProcessSteps.length < 10 ? `0${index + 1}` : index + 1
-                }
+                index={index}
                 title={step.title}
                 description={step.description}
-                onClick={() => setActiveIndex(index)}
+                setActiveIndex={setActiveIndex}
               />
             ))}
           </div>

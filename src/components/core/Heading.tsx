@@ -4,7 +4,7 @@ type HeadingVariant = "primary" | "secondary" | "white";
 
 const defaultClass = "w-fit";
 const variantClasses: Record<HeadingVariant, string> = {
-  primary: "bg-primary text-black",
+  primary: "bg-primary text-black selection:bg-black/20",
   secondary: "bg-secondary text-white",
   white: "bg-white text-black",
 };
@@ -27,7 +27,9 @@ export default function Heading({
 }: HeadingProps) {
   return (
     <Component {...props} className={cn(defaultClass, className)}>
-      <span className={cn(highlightClass, variantClasses[variant], "inline")}>
+      <span
+        className={cn(highlightClass, variantClasses[variant], "boxde inline")}
+      >
         {children}
       </span>
     </Component>

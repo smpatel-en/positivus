@@ -57,14 +57,17 @@ export default function Link({
     >
       <div
         className={cn(
-          "flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-105 lg:h-10 lg:w-10",
+          "flex h-8 w-8 items-center justify-center rounded-full transition-all duration-300 group-hover:scale-90 lg:h-10 lg:w-10",
           iconBgClasses[iconBg],
           variantClasses[variant],
         )}
       >
         <FaArrowRight
           className={cn(
-            "gropu-hover:rotate-0 grop -rotate-30 text-2xl transition-all duration-300 group-hover:translate-x-1 group-hover:-translate-y-1",
+            "-rotate-30 text-2xl transition-all duration-300",
+            variant === "filled"
+              ? "group-hover:translate-x-1 group-hover:-translate-y-1"
+              : "group-hover:-translate-x-3 group-hover:rotate-0",
             iconColorClasses[iconColor],
           )}
         />
