@@ -13,7 +13,7 @@ import Testimonials from "../components/generic/sections/Testimonials";
 import ContactUs from "../components/generic/sections/ContactUs";
 
 // Image
-import CTAImage from "../assets/images/face-and-stars-illustration.png";
+import CTAImage from "../assets/custome/face-and-stars-illustration";
 
 export default function Home() {
   return (

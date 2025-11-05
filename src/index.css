@@ -56,6 +56,11 @@
     @apply pt-12 lg:pt-16;
   }
 
+  input,
+  textarea {
+    @apply focus:outline-secondary;
+  }
+
   .container {
     @apply mx-auto !max-w-[1282px] px-6 lg:!max-w-[1298px] lg:px-8;
   }

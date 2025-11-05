@@ -2,7 +2,7 @@
 import Button from "../../core/Button";
 
 // Images
-import HeroImage from "../../../assets/images/hero-illustration.png";
+import HeroImage from "../../../assets/custome/hero-illustration";
 
 export default function Hero() {
   return (
@@ -29,7 +29,7 @@ export default function Hero() {
           </div>
           {/* Hero Image */}
           <div className="mx-auto max-w-100 lg:max-w-none">
-            <img src={HeroImage} alt="Hero Image" className="object-contain" />
+            <HeroImage />
           </div>
         </div>
       </div>

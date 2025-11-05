@@ -5,7 +5,7 @@ interface CTABannerProps {
   description: string;
   buttonText: string;
   buttonLink: string;
-  Image: string;
+  Image: React.ComponentType<React.SVGProps<SVGSVGElement>> | string;
 }
 
 export default function CTABanner({
@@ -35,7 +35,7 @@ export default function CTABanner({
           </div>
           {/* Image Content */}
           <div className="static right-1/4 mx-auto w-fit md:absolute md:translate-x-[50%]">
-            <img src={Image} alt="CTA Banner Image" />
+            <Image />
           </div>
         </div>
       </div>

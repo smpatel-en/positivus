@@ -39,11 +39,9 @@ export default function Footer() {
                   <a
                     title={link.title}
                     href={link.href}
-                    className="text-xl capitalize"
+                    className="hover:bg-primary flex h-8 w-8 items-center justify-center rounded-full bg-white text-xl text-black transition-colors duration-300"
                   >
-                    <div className="flex h-8 w-8 items-center justify-center rounded-full bg-white text-black">
-                      <link.icon />
-                    </div>
+                    <link.icon />
                   </a>
                 </li>
               ))}
@@ -119,11 +117,9 @@ export default function Footer() {
                   <a
                     title={link.title}
                     href={link.href}
-                    className="text-lg capitalize"
+                    className="text-secondary flex h-6 w-6 items-center justify-center rounded-full bg-white text-lg"
                   >
-                    <div className="text-secondary flex h-6 w-6 items-center justify-center rounded-full bg-white">
-                      <link.icon />
-                    </div>
+                    <link.icon />
                   </a>
                 </li>
               ))}

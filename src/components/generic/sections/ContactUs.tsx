@@ -1,6 +1,6 @@
 import Button from "../../core/Button";
 import SectionHeading from "../SectionHeading";
-import DecorationImage from "../../../assets/images/ring-and-stars-illustration.png";
+import DecorationImage from "../../../assets/custome/ring-and-stars-illustration";
 
 export default function ContactUs() {
   return (
@@ -88,11 +88,7 @@ export default function ContactUs() {
             </form>
 
             {/* Decoration Image */}
-            <img
-              src={DecorationImage}
-              alt="Decoration"
-              className="absolute inset-0 right-0 ml-auto hidden h-auto w-auto translate-x-1/2 lg:block"
-            />
+            <DecorationImage className="absolute inset-0 right-0 ml-auto hidden h-auto w-auto translate-x-1/2 lg:block" />
           </div>
         </div>
       </div>

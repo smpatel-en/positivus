@@ -3,11 +3,11 @@ import { cn } from "../../lib/utils";
 type ButtonVariant = "primary" | "secondary" | "outline";
 
 const defaultClass =
-  "rounded-lg lg:rounded-[14px] px-4 py-2 lg:px-6 lg:py-4 text-lg lg:text-xl font-normal xl:px-[30px] xl:py-5 cursor-pointer";
+  "rounded-lg lg:rounded-[14px] px-4 py-2 lg:px-6 lg:py-4 text-lg lg:text-xl font-normal xl:px-[30px] xl:py-5 cursor-pointer transition-all duration-300 ease-in-out hover:border-primary border border-transparent";
 const variantClasses: Record<ButtonVariant, string> = {
-  primary: "bg-primary text-black",
-  secondary: "bg-secondary text-white",
-  outline: "bg-transparent border border-black text-black",
+  primary: "bg-primary text-black hover:bg-primary/90",
+  secondary: "bg-secondary text-white hover:bg-secondary/90",
+  outline: "bg-transparent border-black text-black hover:bg-primary/10",
 };
 
 interface ButtonProps
