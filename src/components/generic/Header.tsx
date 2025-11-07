@@ -37,7 +37,7 @@ export default function Header() {
     <>
       {/* Overlay */}
       <div
-        className={`fixed inset-0 z-2 bg-black/30 transition-opacity duration-300 ${
+        className={`fixed inset-0 z-3 bg-black/30 transition-opacity duration-300 ${
           open
             ? "opacity-100 backdrop-blur-xs"
             : "pointer-events-none opacity-0"
@@ -113,7 +113,7 @@ export default function Header() {
             </React.Activity>
           </nav>
         </div>
-      </header>{" "}
+      </header>
     </>
   );
 }
