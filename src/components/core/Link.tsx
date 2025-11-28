@@ -30,13 +30,12 @@ const variantClasses: Record<Variant, string> = {
 };
 
 interface LinkProps
-  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
+  extends React.AnchorHTMLAttributes<HTMLAnchorElement | HTMLDivElement> {
   children: React.ReactNode;
   "text-color"?: TextColor;
   "icon-color"?: IconColor;
   "icon-bg"?: IconBg;
   variant?: Variant;
-  to: string;
 }
 export default function Link({
   children,
@@ -45,12 +44,11 @@ export default function Link({
   "icon-bg": iconBg = "white",
   variant = "filled",
   className,
-  to,
   ...props
 }: LinkProps) {
   return (
     <RouterLink
-      to={to}
+      to={props.href || "#"}
       {...props}
       className={cn(
         defaultClass,

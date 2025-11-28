@@ -4,23 +4,23 @@ import { FaFacebookF } from "react-icons/fa6";
 import { FaTwitter } from "react-icons/fa6";
 
 // Client Logos
-import ClientLogo1 from "../../public/assets/images/company-logo-1.png";
-import ClientLogo2 from "../../public/assets/images/company-logo-2.png";
-import ClientLogo3 from "../../public/assets/images/company-logo-3.png";
-import ClientLogo4 from "../../public/assets/images/company-logo-4.png";
-import ClientLogo5 from "../../public/assets/images/company-logo-5.png";
-import ClientLogo6 from "../../public/assets/images/company-logo-6.png";
+import ClientLogo1 from "/assets/images/company-logo-1.png";
+import ClientLogo2 from "/assets/images/company-logo-2.png";
+import ClientLogo3 from "/assets/images/company-logo-3.png";
+import ClientLogo4 from "/assets/images/company-logo-4.png";
+import ClientLogo5 from "/assets/images/company-logo-5.png";
+import ClientLogo6 from "/assets/images/company-logo-6.png";
 
 // Team member images
-import TeamMember1 from "../../public/assets/images/member-pfp.jfif";
+import TeamMember1 from "/assets/images/member-pfp.jfif";
 
 // Images
-import serviceImage1 from "../../public/assets/images/tokyo-magnifier-web-search-with-elements.png";
-import serviceImage2 from "../../public/assets/images/tokyo-selecting-a-value-in-the-browser-window.png";
-import serviceImage3 from "../../public/assets/images/tokyo-browser-window-with-emoticon-likes-and-stars-around.png";
-import serviceImage4 from "../../public/assets/images/tokyo-sending-messages-from-one-place-to-another.png";
-import serviceImage5 from "../../public/assets/images/tokyo-many-browser-windows-with-different-information.png";
-import serviceImage6 from "../../public/assets/images/tokyo-volumetric-analytics-of-different-types-in-web-browsers.png";
+import serviceImage1 from "/assets/images/tokyo-magnifier-web-search-with-elements.png";
+import serviceImage2 from "/assets/images/tokyo-selecting-a-value-in-the-browser-window.png";
+import serviceImage3 from "/assets/images/tokyo-browser-window-with-emoticon-likes-and-stars-around.png";
+import serviceImage4 from "/assets/images/tokyo-sending-messages-from-one-place-to-another.png";
+import serviceImage5 from "/assets/images/tokyo-many-browser-windows-with-different-information.png";
+import serviceImage6 from "/assets/images/tokyo-volumetric-analytics-of-different-types-in-web-browsers.png";
 
 export const navigationLinks = [
   { name: "about us", href: "/about-us" },

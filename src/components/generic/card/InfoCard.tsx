@@ -1,7 +1,7 @@
 import { cn } from "../../../lib/utils";
 
 import Heading from "../../core/Heading";
-import { Link } from "react-router";
+import CustomLink from "../../core/Link";
 
 type CardVariant = "primary" | "secondary" | "tertiary";
 
@@ -28,29 +28,26 @@ export default function InfoCard({
   ...props
 }: CardProps) {
   return (
-    <Link
-      to={href}
-      className={cn(defaultClass, props.className, variantClasses[variant])}
-    >
+    <div className={cn(defaultClass, props.className, variantClasses[variant])}>
       {/* Card Content */}
       <div className="flex flex-col justify-between gap-4">
         <Heading as="h3" variant={variant === "primary" ? "primary" : "white"}>
           {title}
         </Heading>
-        <Link
+        <CustomLink
           icon-bg={variant === "tertiary" ? "white" : "secondary"}
           icon-color={variant === "tertiary" ? "black" : "primary"}
           text-color={variant === "tertiary" ? "white" : "black"}
-          to={href}
+          href={href}
         >
           Learn More
-        </Link>
+        </CustomLink>
       </div>
 
       {/* Card Image */}
       <div className="mx-auto max-w-52">
         <img src={image} alt={title} className="object-contain" />
       </div>
-    </Link>
+    </div>
   );
 }

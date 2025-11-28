@@ -15,7 +15,7 @@ export default function Routes() {
         ],
       },
     ],
-    { basename: "/positivus" },
+    { basename: "/positivus/" },
   );
   return <RouterProvider router={router} />;
 }

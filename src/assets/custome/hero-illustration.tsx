@@ -14,20 +14,20 @@ export default function HeroIllustration(
       {...props}
       xmlns="http://www.w3.org/2000/svg"
     >
-      <g clip-path="url(#clip0_332_1228)">
+      <g clipPath="url(#clip0_332_1228)">
         <path
           d="M310.999 432.535L328.6 427.349L323.464 445L328.6 462.601L310.999 457.465L293.348 462.601L298.533 445L293.348 427.349L310.999 432.535Z"
           fill="var(--black)"
           stroke="var(--white)"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
         />
       </g>
-      <g clip-path="url(#clip1_332_1228)">
+      <g clipPath="url(#clip1_332_1228)">
         <path
           d="M124.947 345.509L156.423 362.659L124.947 379.947L107.729 411.354L90.5097 379.947L59.0337 362.659L90.5097 345.509L107.729 313.964L124.947 345.509Z"
           fill="var(--black)"
           stroke="var(--white)"
-          stroke-miterlimit="10"
+          strokeMiterlimit="10"
         />
       </g>
       <path
