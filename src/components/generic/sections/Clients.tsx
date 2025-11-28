@@ -23,7 +23,7 @@ export default function Clients() {
             ))}
           </Marquee>
           {/* Fade Effect Div */}
-          <div className="fading-scroll absolute inset-0 top-0 left-0 z-2 w-full"></div>
+          <div className="absolute inset-0 top-0 left-0 z-2 w-full bg-[image:var(--fading-right),var(--fading-left)]"></div>
         </div>
       </div>
     </section>

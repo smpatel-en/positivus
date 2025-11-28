@@ -20,6 +20,10 @@
 
   /* Font Family */
   --font-space-grotesk: "Space Grotesk", sans-serif;
+
+  /* Fading Gradient variables */
+  --fading-right: linear-gradient(to right, transparent 90%, var(--white) 100%);
+  --fading-left: linear-gradient(to left, transparent 90%, var(--white) 100%);
 }
 
 /* Theme Styles */
@@ -65,16 +69,12 @@
     @apply focus:outline-secondary ring-0 outline outline-transparent transition-all duration-300;
   }
 
-  .container {
-    @apply mx-auto !max-w-[1282px] px-6 lg:!max-w-[1298px] lg:px-8;
-  }
-
   /* Typography */
   h1 {
-    @apply text-[43px] font-medium lg:text-6xl;
+    @apply text-[32px] font-medium text-pretty sm:text-[43px] lg:text-6xl;
   }
   h2 {
-    @apply text-4xl font-medium lg:text-[40px];
+    @apply text-3xl font-medium sm:text-4xl lg:text-[40px];
   }
   h3 {
     @apply text-[26px] leading-[1.4] font-medium lg:text-3xl;
@@ -87,14 +87,8 @@
   }
 }
 
-.fading-scroll {
-  background: linear-gradient(
-    to right,
-    var(--white) 0%,
-    transparent 10%,
-    transparent 90%,
-    var(--white) 100%
-  );
+@utility container {
+  @apply mx-auto max-w-[1282px]! px-6 lg:max-w-[1298px]! lg:px-8;
 }
 
 /* Custom Swiper Navigation Styles */

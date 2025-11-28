@@ -1,5 +1,5 @@
 import SectionHeading from "../SectionHeading";
-import ProfileCard from "../../core/card/ProfileCard";
+import ProfileCard from "../card/ProfileCard";
 import { teamMembersData } from "../../../lib/data";
 import Button from "../../core/Button";
 

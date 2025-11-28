@@ -82,7 +82,7 @@ export default function ContactUs() {
               </div>
 
               {/* Submit Button */}
-              <Button type="submit" variant="secondary">
+              <Button type="submit" variant="secondary" className="w-fit">
                 Send Message
               </Button>
             </form>

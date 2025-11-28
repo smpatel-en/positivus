@@ -1,12 +1,12 @@
 import { cn } from "../../../lib/utils";
 
-import Heading from "../Heading";
-import Link from "../Link";
+import Heading from "../../core/Heading";
+import Link from "../../core/Link";
 
 type CardVariant = "primary" | "secondary" | "tertiary";
 
 const defaultClass =
-  "bg-grey shadow-card border-secondary flex flex-col sm:flex-row justify-between gap-4 lg:rounded-primary rounded-3xl border p-8 md:p-12 min-h-60 lg:min-h-78";
+  "bg-grey shadow-card border-secondary flex flex-col lg:flex-row justify-between gap-4 lg:rounded-primary rounded-3xl border p-8 md:p-12 min-h-60 lg:min-h-78 group hover:shadow-none transition-all hover:translate-y-1 duration-300";
 const variantClasses: Record<CardVariant, string> = {
   primary: "bg-grey",
   secondary: "bg-primary",
@@ -28,7 +28,10 @@ export default function InfoCard({
   ...props
 }: CardProps) {
   return (
-    <div className={cn(defaultClass, props.className, variantClasses[variant])}>
+    <a
+      href={href}
+      className={cn(defaultClass, props.className, variantClasses[variant])}
+    >
       {/* Card Content */}
       <div className="flex flex-col justify-between gap-4">
         <Heading as="h3" variant={variant === "primary" ? "primary" : "white"}>
@@ -45,9 +48,9 @@ export default function InfoCard({
       </div>
 
       {/* Card Image */}
-      <div className="mx-auto max-w-52 sm:mx-0">
+      <div className="mx-auto max-w-52">
         <img src={image} alt={title} className="object-contain" />
       </div>
-    </div>
+    </a>
   );
 }

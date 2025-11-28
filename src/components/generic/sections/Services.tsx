@@ -1,4 +1,4 @@
-import InfoCard from "../../core/card/InfoCard";
+import InfoCard from "../card/InfoCard";
 import SectionHeading from "../SectionHeading";
 
 import { servicesData } from "../../../lib/data";
@@ -15,7 +15,7 @@ export default function Services() {
             description="At our digital marketing agency, we offer a range of services to help businesses grow and succeed online. These services include:"
           />
           {/* Section Body | Card Wrapper */}
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-2">
+          <div className="grid grid-cols-1 gap-10 md:grid-cols-2">
             {servicesData.map((service, index) => (
               // Card Component
               <InfoCard

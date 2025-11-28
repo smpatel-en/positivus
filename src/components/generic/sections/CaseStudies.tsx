@@ -21,7 +21,7 @@ export default function CaseStudies() {
               // Case Study Item
               <div
                 key={index}
-                className={`flex flex-col gap-2 px-0 py-8 md:gap-5 md:border-t-0 md:px-12 md:py-0 lg:px-15 ${index % 3 !== 0 ? "md:border-l" : ""} ${index !== 0 ? "border-t border-white" : ""}`}
+                className={`flex flex-col gap-2 border-white px-0 py-8 not-first:border-t md:gap-5 md:px-12 md:py-0 not-first:md:border-t-0 md:first-of-type:border-r md:last-of-type:border-l lg:px-15`}
               >
                 {/* Case Study Text */}
                 <p>{caseStudy.text}</p>

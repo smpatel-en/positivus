@@ -2,6 +2,7 @@
 import Logo from "../core/Logo";
 import Heading from "../core/Heading";
 import Button from "../core/Button";
+import { FaRegNewspaper } from "react-icons/fa6";
 
 import {
   navigationLinks,
@@ -109,7 +110,11 @@ export default function Footer() {
               />
 
               {/* Subscribe Button */}
-              <Button type="submit" className="w-full whitespace-nowrap">
+              <Button
+                type="submit"
+                className="w-full whitespace-nowrap"
+                icon={<FaRegNewspaper />}
+              >
                 Subscribe to news
               </Button>
             </form>

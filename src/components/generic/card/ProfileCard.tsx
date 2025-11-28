@@ -1,5 +1,9 @@
 import { cn } from "../../../lib/utils";
 import { FaLinkedinIn } from "react-icons/fa6";
+
+const defaultClass =
+  "shadow-card lg:rounded-primary border-secondary rounded-3xl border p-6 lg:p-9 hover:shadow-none transition-all hover:translate-y-1 duration-300 group";
+
 interface ProfileCardProps extends React.HTMLAttributes<HTMLDivElement> {
   name: string;
   role: string;
@@ -18,20 +22,14 @@ export default function ProfileCard({
   ...props
 }: ProfileCardProps) {
   return (
-    <div
-      className={cn(
-        "shadow-card lg:rounded-primary border-secondary rounded-3xl border p-9",
-        className,
-      )}
-      {...props}
-    >
+    <div className={cn(defaultClass, className)} {...props}>
       {/* Profile Card Author */}
       <div className="mb-7 flex flex-col gap-4 lg:flex-row">
         <div className="profile-card-image-mask relative aspect-square h-25">
           <img
             src={image}
             alt={name}
-            className="mx-auto w-fit object-cover grayscale"
+            className="mx-auto w-fit object-cover grayscale transition-all duration-300 group-hover:scale-105"
           />
           <div className="bg-primary absolute inset-0 top-0 left-0 h-full w-full mix-blend-multiply"></div>
         </div>

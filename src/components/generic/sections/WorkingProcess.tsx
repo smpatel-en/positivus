@@ -1,6 +1,6 @@
 import SectionHeading from "../SectionHeading";
 import { workingProcessSteps } from "../../../lib/data";
-import FAQcard from "../../core/card/FaqCard";
+import FAQcard from "../card/FaqCard";
 import React from "react";
 
 export default function WorkingProcess() {

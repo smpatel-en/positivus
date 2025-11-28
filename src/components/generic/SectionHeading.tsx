@@ -8,7 +8,7 @@ export default function SectionHeading({
   description: string;
 }) {
   return (
-    <div className="mb-15 flex flex-col items-center gap-10 md:flex-row lg:mb-21">
+    <div className="mb-10 flex flex-col items-center gap-10 sm:mb-15 md:flex-row lg:mb-21">
       {/* Section Title */}
       <Heading>{title}</Heading>
 

@@ -1,5 +1,5 @@
-import LogoDefault from "../../assets/images/logo-deafult.png";
-import LogoLight from "../../assets/images/logo-light.png";
+import LogoDefault from "../../../public/assets/images/logo-deafult.png";
+import LogoLight from "../../../public/assets/images/logo-light.png";
 
 interface LogoProps extends React.HTMLAttributes<HTMLImageElement> {
   variant?: "default" | "light";

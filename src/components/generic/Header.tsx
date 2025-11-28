@@ -102,7 +102,7 @@ export default function Header() {
 
                   {/* Call to Action Button | Mobile */}
                   <Button
-                    className="mx-auto mt-4 block sm:hidden"
+                    className="mx-auto mt-4 block w-fit sm:hidden"
                     variant="outline"
                     href={navigationCTA.href}
                   >
