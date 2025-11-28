@@ -3,6 +3,7 @@ import Logo from "../core/Logo";
 import Heading from "../core/Heading";
 import Button from "../core/Button";
 import { FaRegNewspaper } from "react-icons/fa6";
+import { Link } from "react-router";
 
 import {
   navigationLinks,
@@ -27,12 +28,12 @@ export default function Footer() {
               {navigationLinks.map((link) => (
                 // Navigation Link Item
                 <li key={link.name}>
-                  <a
-                    href={link.href}
+                  <Link
+                    to={link.href}
                     className="hover:text-primary capitalize underline transition-colors duration-300"
                   >
                     {link.name}
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -42,13 +43,13 @@ export default function Footer() {
               {socialLinks.map((link, index) => (
                 // Social Link Item
                 <li key={index}>
-                  <a
+                  <Link
+                    to={link.href}
                     title={link.title}
-                    href={link.href}
                     className="hover:bg-primary flex h-8 w-8 items-center justify-center rounded-full bg-white text-xl text-black transition-all duration-300 hover:scale-105"
                   >
                     <link.icon />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -70,32 +71,32 @@ export default function Footer() {
               <ul className="flex max-w-70 flex-col gap-5 sm:max-w-none">
                 {/* Email */}
                 <li>
-                  <a
-                    href={`mailto:${contactInfo.email}`}
+                  <Link
+                    to={`mailto:${contactInfo.email}`}
                     className="hover:text-primary transition-colors duration-300 hover:underline"
                   >
                     Email: {contactInfo.email}
-                  </a>
+                  </Link>
                 </li>
 
                 {/* Phone */}
                 <li>
-                  <a
-                    href={`tel:${contactInfo.phone}`}
+                  <Link
+                    to={`tel:${contactInfo.phone}`}
                     className="hover:text-primary transition-colors duration-300 hover:underline"
                   >
                     Phone: {contactInfo.phone}
-                  </a>
+                  </Link>
                 </li>
 
                 {/* Address */}
                 <li>
-                  <a
-                    href={contactInfo.address}
+                  <Link
+                    to={contactInfo.address}
                     className="hover:text-primary transition-colors duration-300 hover:underline"
                   >
                     Address: {contactInfo.address}
-                  </a>
+                  </Link>
                 </li>
               </ul>
             </div>
@@ -124,13 +125,13 @@ export default function Footer() {
               {socialLinks.map((link, index) => (
                 // Social Link Item
                 <li key={index}>
-                  <a
+                  <Link
+                    to={link.href}
                     title={link.title}
-                    href={link.href}
                     className="text-secondary flex h-6 w-6 items-center justify-center rounded-full bg-white text-lg"
                   >
                     <link.icon />
-                  </a>
+                  </Link>
                 </li>
               ))}
             </ul>
@@ -144,12 +145,12 @@ export default function Footer() {
             </p>
 
             {/* Privacy Policy */}
-            <a
-              href="#"
+            <Link
+              to="#"
               className="hover:text-primary h-fit whitespace-nowrap underline transition-colors duration-300"
             >
               Privacy Policy
-            </a>
+            </Link>
             <div className="ml-auto flex items-center gap-2">
               {themeData.map((color, index) => (
                 <div

@@ -23,7 +23,7 @@ import serviceImage5 from "../../public/assets/images/tokyo-many-browser-windows
 import serviceImage6 from "../../public/assets/images/tokyo-volumetric-analytics-of-different-types-in-web-browsers.png";
 
 export const navigationLinks = [
-  { name: "about us", href: "#" },
+  { name: "about us", href: "/about-us" },
   { name: "services", href: "#" },
   { name: "use cases", href: "#" },
   { name: "pricing", href: "#" },

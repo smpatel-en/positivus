@@ -1,5 +1,6 @@
 import React from "react";
 import { navigationLinks } from "../../lib/data";
+import { Link } from "react-router";
 
 // Components
 import Logo from "../core/Logo";
@@ -56,12 +57,12 @@ export default function Header() {
               <ul className="hidden gap-6 lg:flex xl:gap-10">
                 {navigationLinks.map((link) => (
                   <li key={link.name}>
-                    <a
-                      href={link.href}
+                    <Link
+                      to={link.href}
                       className="text-lg capitalize hover:underline lg:text-xl"
                     >
                       {link.name}
-                    </a>
+                    </Link>
                   </li>
                 ))}
               </ul>
@@ -90,12 +91,12 @@ export default function Header() {
                   <ul className="flex flex-col items-center gap-4">
                     {navigationLinks.map((link) => (
                       <li key={link.name}>
-                        <a
-                          href={link.href}
+                        <Link
+                          to={link.href}
                           className="text-lg capitalize hover:underline"
                         >
                           {link.name}
-                        </a>
+                        </Link>
                       </li>
                     ))}
                   </ul>

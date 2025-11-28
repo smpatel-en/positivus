@@ -1,5 +1,6 @@
 import { cn } from "../../lib/utils";
 import { FaArrowRight } from "react-icons/fa";
+import { Link as RouterLink } from "react-router";
 
 type TextColor = "primary" | "white" | "black";
 type IconColor = "primary" | "black" | "white";
@@ -28,14 +29,15 @@ const variantClasses: Record<Variant, string> = {
   simple: "bg-transparent",
 };
 
-interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {
+interface LinkProps
+  extends Omit<React.AnchorHTMLAttributes<HTMLAnchorElement>, "href"> {
   children: React.ReactNode;
   "text-color"?: TextColor;
   "icon-color"?: IconColor;
   "icon-bg"?: IconBg;
   variant?: Variant;
+  to: string;
 }
-
 export default function Link({
   children,
   "text-color": textColor = "black",
@@ -43,10 +45,12 @@ export default function Link({
   "icon-bg": iconBg = "white",
   variant = "filled",
   className,
+  to,
   ...props
 }: LinkProps) {
   return (
-    <a
+    <RouterLink
+      to={to}
       {...props}
       className={cn(
         defaultClass,
@@ -73,6 +77,6 @@ export default function Link({
         />
       </div>
       {children}
-    </a>
+    </RouterLink>
   );
 }

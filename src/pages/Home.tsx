@@ -1,5 +1,4 @@
 // Layout
-import CommonLayout from "../components/layouts/Common";
 
 // Sections
 import Hero from "../components/generic/sections/Hero";
@@ -17,7 +16,7 @@ import CTAImage from "../assets/custome/face-and-stars-illustration";
 
 export default function Home() {
   return (
-    <CommonLayout>
+    <>
       <Hero />
       <Clients />
       <Services />
@@ -33,6 +32,6 @@ export default function Home() {
       <Team />
       <Testimonials />
       <ContactUs />
-    </CommonLayout>
+    </>
   );
 }

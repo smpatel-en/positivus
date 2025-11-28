@@ -1,7 +1,7 @@
 import { cn } from "../../../lib/utils";
 
 import Heading from "../../core/Heading";
-import Link from "../../core/Link";
+import { Link } from "react-router";
 
 type CardVariant = "primary" | "secondary" | "tertiary";
 
@@ -13,7 +13,7 @@ const variantClasses: Record<CardVariant, string> = {
   tertiary: "bg-secondary",
 };
 
-interface CardProps extends React.HTMLAttributes<HTMLDivElement> {
+interface CardProps extends React.HTMLAttributes<HTMLAnchorElement> {
   title: string;
   href: string;
   image: string;
@@ -28,8 +28,8 @@ export default function InfoCard({
   ...props
 }: CardProps) {
   return (
-    <a
-      href={href}
+    <Link
+      to={href}
       className={cn(defaultClass, props.className, variantClasses[variant])}
     >
       {/* Card Content */}
@@ -41,7 +41,7 @@ export default function InfoCard({
           icon-bg={variant === "tertiary" ? "white" : "secondary"}
           icon-color={variant === "tertiary" ? "black" : "primary"}
           text-color={variant === "tertiary" ? "white" : "black"}
-          href={href}
+          to={href}
         >
           Learn More
         </Link>
@@ -51,6 +51,6 @@ export default function InfoCard({
       <div className="mx-auto max-w-52">
         <img src={image} alt={title} className="object-contain" />
       </div>
-    </a>
+    </Link>
   );
 }

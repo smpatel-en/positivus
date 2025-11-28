@@ -1,5 +1,6 @@
 import { cn } from "../../../lib/utils";
 import { FaLinkedinIn } from "react-icons/fa6";
+import { Link } from "react-router";
 
 const defaultClass =
   "shadow-card lg:rounded-primary border-secondary rounded-3xl border p-6 lg:p-9 hover:shadow-none transition-all hover:translate-y-1 duration-300 group";
@@ -39,12 +40,12 @@ export default function ProfileCard({
             <p>{role}</p>
           </div>
           {/* LinkedIn Link */}
-          <a
-            href={linkedIn}
+          <Link
+            to={linkedIn}
             className="bg-secondary text-primary ml-auto grid h-8 w-8 shrink-0 place-items-center rounded-full transition-all duration-300 hover:scale-110"
           >
             <FaLinkedinIn />
-          </a>
+          </Link>
         </div>
       </div>
 

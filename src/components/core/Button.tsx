@@ -1,4 +1,5 @@
 import { cn } from "../../lib/utils";
+import { Link } from "react-router";
 
 type ButtonVariant = "primary" | "secondary" | "outline";
 
@@ -30,10 +31,10 @@ export default function Button({
 
   if (href) {
     return (
-      <a href={href} className={buttonClasses}>
+      <Link to={href} className={buttonClasses}>
         {children}
         {props.icon && props.icon}
-      </a>
+      </Link>
     );
   }
 

@@ -1,5 +1,6 @@
 import LogoDefault from "../../../public/assets/images/logo-deafult.png";
 import LogoLight from "../../../public/assets/images/logo-light.png";
+import { Link } from "react-router";
 
 interface LogoProps extends React.HTMLAttributes<HTMLImageElement> {
   variant?: "default" | "light";
@@ -8,8 +9,8 @@ interface LogoProps extends React.HTMLAttributes<HTMLImageElement> {
 export default function Logo({ variant, ...props }: LogoProps) {
   return (
     // Logo Wrapper
-    <a
-      href="/"
+    <Link
+      to="/"
       className={`rounded-md p-2 transition-all duration-300 hover:scale-103 lg:rounded-2xl lg:p-4 ${
         variant === "light" ? "hover:bg-white/10" : "hover:bg-black/5"
       }`}
@@ -20,6 +21,6 @@ export default function Logo({ variant, ...props }: LogoProps) {
         className="max-h-7 md:max-h-9"
         {...props}
       />
-    </a>
+    </Link>
   );
 }
